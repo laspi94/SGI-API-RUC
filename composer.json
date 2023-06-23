@@ -21,10 +21,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "SgiSoftware\\Publish::config"
+            "SgiSoftware\\ApiRuc\\Publish::config"
         ],
         "post-update-cmd": [
-            "SgiSoftware\\Publish::config"
+            "SgiSoftware\\ApiRuc\\Publish::config"
         ]
     },
     "authors": [
