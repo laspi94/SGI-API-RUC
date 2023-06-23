@@ -5,7 +5,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SgiSoftware\\ApiRuc\\": "src\\classes"
+            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\classes"
         }
     },
     "authors": [
