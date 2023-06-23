@@ -2,6 +2,7 @@
 
 namespace SgiSoftware\class;
 
+use SgiSoftware\configs\configsApi;
 use SgiSoftware\helpers\Response;
 use SgiSoftware\helpers\SET;
 use stdClass;
@@ -30,7 +31,7 @@ class ApiCall
      */
     public function __construct()
     {
-        $config = include(dirname(__FILE__) . '/configs/ruc-config.php');
+        $config =  configsApi::get();
 
         $this->APIKEY = $config['sgi_ruc_apikey'];
         $this->API_BASE_PATH = $config['sgi_ruc_base_path'];
