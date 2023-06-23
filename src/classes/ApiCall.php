@@ -25,7 +25,7 @@ class ApiCall
     public String $API_ENDPOINT_BUSCAR;
 
     /**
-     * Devuelve el listado de cajas habilitadas para el usuario con base al ROL definido
+     * Comsume api call
      * @return false|\Illuminate\Support\Collection|string
      */
     public function __construct()
