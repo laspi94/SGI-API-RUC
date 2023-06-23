@@ -19,6 +19,14 @@
             "SgiSoftware\\ApiRuc\\": "src"
         }
     },
+    "scripts": {
+        "post-install-cmd": [
+            "SgiSoftware\\Publish::config"
+        ],
+        "post-update-cmd": [
+            "SgiSoftware\\Publish::config"
+        ]
+    },
     "authors": [
         {
             "name": "Alan Laspina",
