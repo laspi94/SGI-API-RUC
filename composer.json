@@ -4,13 +4,19 @@
     "type": "library",
     "license": "MIT",
     "autoload": {
+        "files": [
+            "src/classes/ApiCall.php"
+        ],
         "psr-4": {
-            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\classes"
+            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\"
         }
     },
     "autoload-dev": {
+        "files": [
+            "src/classes/ApiCall.php"
+        ],
         "psr-4": {
-            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\classes"
+            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\"
         }
     },
     "authors": [
@@ -24,8 +30,8 @@
         "php": "^7.1|^8"
     },
     "extra": {
-       "branch-alias": {
-           "dev-master": "1.0.0-dev"
-       }
-   }
+        "branch-alias": {
+            "dev-master": "1.0.0-dev"
+        }
+    }
 }
