@@ -5,18 +5,18 @@
     "license": "MIT",
     "autoload": {
         "files": [
-            "src/classes/ApiCall.php"
+            "src/SgiSoftware/class/ApiCall.php"
         ],
-        "psr-4": {
-            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\"
+        "psr-0": {
+            "SgiSoftware\\ApiRuc\\": "src"
         }
     },
     "autoload-dev": {
         "files": [
-            "src/classes/ApiCall.php"
+            "src/SgiSoftware/class/ApiCall.php"
         ],
-        "psr-4": {
-            "Vendor\\SgiSoftware\\ApiRuc\\": "src\\"
+        "psr-0": {
+            "SgiSoftware\\ApiRuc\\": "src"
         }
     },
     "authors": [

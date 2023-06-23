@@ -1,9 +1,9 @@
 <?php
 
-namespace src\classes;
+namespace SgiSoftware\class;
 
-use src\helpers\Response;
-use src\helpers\SET;
+use SgiSoftware\helpers\Response;
+use SgiSoftware\helpers\SET;
 use stdClass;
 
 class ApiCall

@@ -6,7 +6,7 @@
  * Time: 16:49
  */
 
-namespace src\Helpers;
+namespace SgiSoftware\Helpers;
 
 class StatusHelper
 {
