@@ -30,7 +30,7 @@ class ApiCall
      */
     public function __construct()
     {
-        $config = include('src\configs\sgi-config.php');
+        $config = include('SgiSoftware\configs\sgi-config.php');
 
         $this->APIKEY = $config['sgi_ruc_apikey'];
         $this->API_BASE_PATH = $config['sgi_ruc_base_path'];
