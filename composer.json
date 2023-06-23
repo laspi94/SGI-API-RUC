@@ -1,0 +1,19 @@
+{
+    "name": "sgi-software/api-ruc",
+    "description": "package para realizar llamada al api de SGI-Software y Dominios para obtener los contribuyentes registrados en la Secretaría de Estado de Tributación/Paraguay",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SgiSoftware\\ApiRuc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alan Laspina",
+            "email": "alanjoselaspina@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
