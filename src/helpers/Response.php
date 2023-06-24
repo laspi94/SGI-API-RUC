@@ -6,7 +6,7 @@
  * Time: 10:09 AM
  */
 
-namespace SgiSoftware\helpers;
+namespace SgiSoftware\ApiRuc\helpers;
 
 class Response
 {

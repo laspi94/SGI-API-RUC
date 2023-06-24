@@ -6,7 +6,7 @@
  * Time: 16:49
  */
 
-namespace SgiSoftware\helpers;
+namespace SgiSoftware\ApiRuc\helpers;
 
 class StatusHelper
 {
