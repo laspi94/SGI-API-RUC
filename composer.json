@@ -7,25 +7,9 @@
         "files": [
             "src/class/ApiCall.php"
         ],
-        "psr-0": {
-            "SgiSoftware\\ApiRuc\\": "vendor/sgi-software/api-ruc/src/"
+        "psr-4": {
+            "SgiSoftware\\ApiRuc\\": "src/"
         }
-    },
-    "autoload-dev": {
-        "files": [
-            "src/class/ApiCall.php"
-        ],
-        "psr-0": {
-            "SgiSoftware\\ApiRuc\\": "vendor/sgi-software/api-ruc/src/"
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "SgiSoftware\\ApiRuc\\Publish::config"
-        ],
-        "post-update-cmd": [
-            "SgiSoftware\\ApiRuc\\Publish::config"
-        ]
     },
     "authors": [
         {
