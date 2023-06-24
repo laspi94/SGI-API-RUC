@@ -3,7 +3,7 @@
         'name' => 'sgi-software/api-ruc',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'a13e40dcb4801375500dc174406f18c40acbcbae',
+        'reference' => 'db12eb96fda07753fecad56f7a2d3222cb40f88d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -94,7 +94,7 @@
         'sgi-software/api-ruc' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'a13e40dcb4801375500dc174406f18c40acbcbae',
+            'reference' => 'db12eb96fda07753fecad56f7a2d3222cb40f88d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

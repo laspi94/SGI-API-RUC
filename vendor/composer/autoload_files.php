@@ -11,5 +11,5 @@ return array(
     'a1105708a18b76903365ca1c4aa61b02' => $vendorDir . '/symfony/translation/Resources/functions.php',
     '60799491728b879e74601d83e38b2cad' => $vendorDir . '/illuminate/collections/helpers.php',
     '72579e7bd17821bb1321b87411366eae' => $vendorDir . '/illuminate/support/helpers.php',
-    '7f9029738d7cda860d3d3c55130dc43a' => $baseDir . '/src/SgiSoftware/class/ApiCall.php',
+    'f7e5681a1cb3fe779cdcaa5d2909e31c' => $baseDir . '/src/class/ApiCall.php',
 );

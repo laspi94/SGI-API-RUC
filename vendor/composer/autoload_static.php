@@ -12,7 +12,7 @@ class ComposerStaticInit79a4fd804326e670d35b68072ad4fc04
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '60799491728b879e74601d83e38b2cad' => __DIR__ . '/..' . '/illuminate/collections/helpers.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
-        '7f9029738d7cda860d3d3c55130dc43a' => __DIR__ . '/../..' . '/src/SgiSoftware/class/ApiCall.php',
+        'f7e5681a1cb3fe779cdcaa5d2909e31c' => __DIR__ . '/../..' . '/src/class/ApiCall.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -26,6 +26,7 @@ class ComposerStaticInit79a4fd804326e670d35b68072ad4fc04
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
+            'SgiSoftware\\ApiRuc\\' => 19,
         ),
         'P' => 
         array (
@@ -68,6 +69,10 @@ class ComposerStaticInit79a4fd804326e670d35b68072ad4fc04
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
         ),
+        'SgiSoftware\\ApiRuc\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -78,9 +83,9 @@ class ComposerStaticInit79a4fd804326e670d35b68072ad4fc04
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Contracts\\' => 
@@ -94,17 +99,6 @@ class ComposerStaticInit79a4fd804326e670d35b68072ad4fc04
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'SgiSoftware\\ApiRuc\\' => 
-            array (
-                0 => __DIR__ . '/../..' . '/src',
-                1 => __DIR__ . '/../..' . '/src',
-            ),
         ),
     );
 
@@ -122,7 +116,6 @@ class ComposerStaticInit79a4fd804326e670d35b68072ad4fc04
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit79a4fd804326e670d35b68072ad4fc04::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit79a4fd804326e670d35b68072ad4fc04::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit79a4fd804326e670d35b68072ad4fc04::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit79a4fd804326e670d35b68072ad4fc04::$classMap;
 
         }, null, ClassLoader::class);
