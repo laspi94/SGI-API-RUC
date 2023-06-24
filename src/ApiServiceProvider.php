@@ -22,4 +22,14 @@ class ApiServiceProvider extends ServiceProvider
             'api-config'
         );
     }
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
 }
