@@ -14,7 +14,7 @@ class ApiServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/websockets.php' => config_path('api-config.php'),
+            __DIR__ . '/../config/api-config.php' => config_path('api-config.php'),
         ], 'config');
 
         $this->mergeConfigFrom(
