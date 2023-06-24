@@ -26,11 +26,11 @@ class ApiCall
 
     public function __construct()
     {
-        $this->APIKEY = config('sgi_ruc_apikey');
-        $this->API_BASE_PATH = config('sgi_ruc_base_path');
-        $this->API_BASE_PATH_ENDPOINT = config('sgi_ruc_api_base_path_endpoint');
-        $this->API_ENDPOINT_OBTENER = config('sgi_ruc_api_endpoint_obtener');
-        $this->API_ENDPOINT_BUSCAR = config('sgi_ruc_api_endpoint_buscar');
+        $this->APIKEY = config('api-config.ruc_apikey');
+        $this->API_BASE_PATH = config('api-config.ruc_base_path');
+        $this->API_BASE_PATH_ENDPOINT = config('api-config.ruc_api_base_path_endpoint');
+        $this->API_ENDPOINT_OBTENER = config('api-config.ruc_api_endpoint_obtener');
+        $this->API_ENDPOINT_BUSCAR = config('api-config.ruc_api_endpoint_buscar');
     }
 
     public function obtenerContribuyente($rucn)
