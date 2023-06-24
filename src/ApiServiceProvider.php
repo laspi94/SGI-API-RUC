@@ -1,6 +1,6 @@
 <?php
 
-namespace SgiSoftware;
+namespace src;
 
 use \illuminate\support\ServiceProvider;
 
