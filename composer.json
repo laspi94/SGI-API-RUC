@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "src/providers/ApiServiceProvider"
+                "SgiSoftware\\ApiRuc\\ApiServiceProvider"
             ],
             "branch-alias": {
                 "dev-master": "1.0.0-dev"

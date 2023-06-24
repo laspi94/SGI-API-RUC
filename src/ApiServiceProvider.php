@@ -1,6 +1,6 @@
 <?php
 
-namespace SgiSoftware\providers;
+namespace SgiSoftware\ApiRuc;
 
 use \illuminate\support\ServiceProvider;
 
