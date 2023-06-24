@@ -3,7 +3,6 @@
 namespace SgiSoftware;
 
 use \illuminate\support\ServiceProvider;
-use \illuminate\Support\Facades\Config;
 
 class ApiServiceProvider extends ServiceProvider
 {

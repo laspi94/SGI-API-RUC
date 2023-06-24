@@ -24,10 +24,6 @@ class ApiCall
 
     public String $API_ENDPOINT_BUSCAR;
 
-    /**
-     * Comsume api call
-     * @return false|\Illuminate\Support\Collection|string
-     */
     public function __construct()
     {
         $this->APIKEY = config('sgi_ruc_apikey');

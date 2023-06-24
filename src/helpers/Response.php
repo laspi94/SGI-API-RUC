@@ -6,7 +6,7 @@
  * Time: 10:09 AM
  */
 
-namespace SgiSoftware\Helpers;
+namespace SgiSoftware\helpers;
 
 class Response
 {
