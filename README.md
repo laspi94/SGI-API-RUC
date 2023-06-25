@@ -35,7 +35,7 @@ class RucController extends Controller
     "TIPOID": "12"
 }
 ```
-# Ejemolo de uso para obtener el rawData "obtenerContribuyente"
+# Ejemplo de uso para obtener el rawData "obtenerContribuyente"
 
 ```php
 <?php
