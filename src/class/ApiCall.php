@@ -35,10 +35,11 @@ class ApiCall
 
     public function obtenerContribuyente($rucn)
     {
-        $url = $this->API_BASE_PATH . $this->API_BASE_PATH_ENDPOINT . $this->API_ENDPOINT_OBTENER . $this->APIKEY . '/' . $rucn;
+        $url = $this->API_BASE_PATH . $this->API_BASE_PATH_ENDPOINT . $this->API_ENDPOINT_OBTENER . $rucn;
 
         $additional_headers = array(
             'Content-Type: application/json',
+            'apikey: ' . $this->APIKEY
         );
 
         $ch = curl_init($url);
@@ -51,23 +52,24 @@ class ApiCall
         $server_output = curl_exec($ch);
         $response = json_decode($server_output);
 
-        if ($response->status == Response::STATUS_OK) {
+        if ($response->code == Response::STATUS_OK) {
             return $response;
         } else {
             $cliente = new stdClass();
             $response = new \stdClass();
-            $response->datos = $cliente;
-            $response->status = Response::STATUS_NOT_FOUND;
+            $response->content = $cliente;
+            $response->code = Response::STATUS_NOT_FOUND;
             return $response;
         }
     }
 
     public function buscarContribuyente($rucn)
     {
-        $url = $this->API_BASE_PATH . $this->API_BASE_PATH_ENDPOINT . $this->API_ENDPOINT_BUSCAR . $this->APIKEY . '/' . $rucn;
+        $url = $this->API_BASE_PATH . $this->API_BASE_PATH_ENDPOINT . $this->API_ENDPOINT_BUSCAR . $rucn;
 
         $additional_headers = array(
             'Content-Type: application/json',
+            'apikey: ' . $this->APIKEY
         );
 
         $ch = curl_init($url);
@@ -80,29 +82,31 @@ class ApiCall
         $server_output = curl_exec($ch);
         $response = json_decode($server_output);
 
-        if ($response->status == Response::STATUS_OK) {
+        if ($response->code == Response::STATUS_OK) {
             return $response;
         } else {
             $cliente = new stdClass();
             $response = new \stdClass();
-            $response->datos = $cliente;
-            $response->status = Response::STATUS_NOT_FOUND;
+            $response->content = $cliente;
+            $response->code = Response::STATUS_NOT_FOUND;
             return $response;
         }
     }
 
     public static function obtenerSiExiste($rucn)
     {
-        $callApi = self::obtenerContribuyente($rucn);
+        $callApi = (new ApiCall)->obtenerContribuyente($rucn);
 
         /** Status 200 significa que esta en los registros de la SET
          * por lo tanto su tipo de identificación es RUC = 11
          */
         $cliente = new stdClass();
 
-        if ($callApi->status == 200) {
+        if ($callApi->code == 200) {
 
-            switch ($callApi->response->ESTADO) {
+            $reponseContent = $callApi->response->content;
+
+            switch ($reponseContent->ESTADO) {
                 case SET::ESTADO_CONTRIBUYENTE_ACTIVO:
                     $activo = true;
                     break;
@@ -117,18 +121,18 @@ class ApiCall
                     break;
             }
 
-            $nombreContribuyente = ($callApi->response->NOMBRE != '' ? ($callApi->response->APELLIDO . ',' . $callApi->response->NOMBRE) : $callApi->response->APELLIDO);
+            $nombreContribuyente = ($reponseContent->NOMBRE != '' ? ($reponseContent->APELLIDO . ',' . $reponseContent->NOMBRE) : $reponseContent->APELLIDO);
             $cliente->DESCRIPC = $nombreContribuyente;
             $cliente->FACT_NOMB = $nombreContribuyente;
-            $cliente->FACT_RUC = $activo ? ($callApi->response->RUCN . '-' . $callApi->response->DVN) : $callApi->response->RUCN;
-            $cliente->RUCN = $callApi->response->RUCN;
-            $cliente->DVN = $callApi->response->DVN;
+            $cliente->FACT_RUC = $activo ? ($reponseContent->RUCN . '-' . $reponseContent->DVN) : $reponseContent->RUCN;
+            $cliente->RUCN = $reponseContent->RUCN;
+            $cliente->DVN = $reponseContent->DVN;
             $cliente->TIPOID = $activo ? self::TIPO_IDENTIFICACION_RUC : self::TIPO_IDENTIFICACION_CEDULA_IDENTIDAD;
         }
 
         $res = new \stdClass();
-        $res->datos = $cliente;
-        $res->status = $callApi->status;
+        $res->content = $cliente;
+        $res->code = $callApi->code;
 
         return $res;
     }
