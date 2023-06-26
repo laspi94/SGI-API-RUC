@@ -1,3 +1,56 @@
+# api-ruc
+
+package para realizar llamada al api de SGI Software y Dominios para obtener los contribuyentes registrados en la Secretaría de Estado de Tributación/Paraguay
+
+## API Referencia
+
+#### Obtener datos del contribuyente.
+
+```http
+  GET /api/v2/tributario/${rucn}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `rucn` | `string` | **Required**. RUC |
+
+#### ${rucn}
+
+Sin digito verificador.
+
+#### Obtener listado de contribuyentes con 
+
+```http
+  GET /api/v2/buscar/tributario/${referencia}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `referencia` | `string` | **Required**. RUC |
+
+#### ${referencia}
+
+Puede usar la referencia del nombre, apellido, denominación o ruc(parcial sin digito verificador).
+
+
+## Environment Variables
+
+Para ejecutar este proyecto, deberá agregar las siguientes variables de entorno a su archivo .env
+
+`RUC_APIKEY` = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+
+## Installation
+
+Instalar mi proyecto con composer
+
+```bash
+  composer require sgi-software/api-ruc
+```
+    
+## Uso/Ejemplos
+
+=======
 # SGI-API-RUC
 package para realizar llamada al api de SGI Software y Dominios para obtener los contribuyentes registrados en la Secretaría de Estado de Tributación/Paraguay
 
@@ -21,42 +74,21 @@ class RucController extends Controller
     }
 }
 ```
-# Respuesta servidor
-```json
-{
- "code": 200,
-  "content":
-  {
-    "DESCRIPC": "LASPINA VILLALBA, CARLOS FABIAN",
-    "FACT_NOMB": "LASPINA VILLALBA, CARLOS FABIAN",
-    "FACT_RUC": 4199210,
-    "RUCN": 4199210,
-    "DVN": 5, 
-    "TIPOID": "12"
-}
-```
-# Ejemplo de uso para obtener el rawData "obtenerContribuyente"
+## Usado por
 
-```php
-<?php
-  (new ApiCall)->obtenerContribuyente($rucn);
-```
+Este proyecto es utilizado por las siguientes empresas:
 
-```json
-{
-    "code": 200,
-    "status": "OK",
-    "response": {
-        "content": {
-            "RUCN": 4199210,
-            "NOMBRE": " CARLOS FABIAN",
-            "APELLIDO": "LASPINA VILLALBA",
-            "RUCN_ANTERIOR": "LAVC921920E",
-            "DVN": 5,
-            "ESTADO": "SUSPENSION TEMPORAL",
-            "ARCHIVO": "ruc0.zip"
-        }
-    },
-    "message": "Contribuyente encontrado!"
-}
-```
+- SGI Software y Dominios
+
+## FAQ
+
+#### ¿Cada cuanto se actualizan los registros?
+
+Los registros son actualizados día a día, con los datos emitidos por el estado.
+
+## License
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+## Authors
+
+- [@laspi94](https://www.github.com/laspi94)
