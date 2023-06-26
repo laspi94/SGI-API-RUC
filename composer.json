@@ -9,7 +9,7 @@
             "src/class/ApiCall.php"
         ],
         "psr-4": {
-            "SgiSoftware\\ApiRuc\\": "src/"
+            "SgiSoftware\\ApiRuc\\": "src\\classes"
         }
     },
     "authors": [
