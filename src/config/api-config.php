@@ -13,8 +13,8 @@ return [
     */
 
     'ruc_apikey' => env('RUC_APIKEY', ''),
-    'ruc_base_path' => env('RUC_API_BASE_PATH', ''),
-    'ruc_api_base_path_endpoint' => env('RUC_API_BASE_PATH_ENDPOINT', ''),
-    'ruc_api_endpoint_obtener' => env('RUC_API_ENDPOINT_OBTENER', ''),
-    'ruc_api_endpoint_buscar' => env('RUC_API_ENDPOINT_BUSCAR', ''),
+    'ruc_base_path' => env('RUC_API_BASE_PATH', 'https://sgigad.click/'),
+    'ruc_api_base_path_endpoint' => env('RUC_API_BASE_PATH_ENDPOINT', 'ruc/api/v2'),
+    'ruc_api_endpoint_obtener' => env('RUC_API_ENDPOINT_OBTENER', '/tributario/'),
+    'ruc_api_endpoint_buscar' => env('RUC_API_ENDPOINT_BUSCAR', '/buscar/tributario/'),
 ];
