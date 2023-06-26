@@ -49,7 +49,6 @@ Instalar mi proyecto con composer
 ```
     
 ## Uso/Ejemplos
-# Ejemplo de uso para el método "obtenerSiExiste"
 
 ```php
 <?php
