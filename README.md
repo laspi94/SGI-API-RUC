@@ -1,8 +1,6 @@
-
 # api-ruc
 
 package para realizar llamada al api de SGI Software y Dominios para obtener los contribuyentes registrados en la Secretaría de Estado de Tributación/Paraguay
-
 
 ## API Referencia
 
@@ -52,6 +50,11 @@ Instalar mi proyecto con composer
     
 ## Uso/Ejemplos
 
+=======
+# SGI-API-RUC
+package para realizar llamada al api de SGI Software y Dominios para obtener los contribuyentes registrados en la Secretaría de Estado de Tributación/Paraguay
+
+# Ejemplo de uso para el método "obtenerSiExiste"
 ```php
 <?php
 class RucController extends Controller
@@ -77,12 +80,12 @@ Este proyecto es utilizado por las siguientes empresas:
 
 - SGI Software y Dominios
 
-
 ## FAQ
 
 #### ¿Cada cuanto se actualizan los registros?
 
 Los registros son actualizados día a día, con los datos emitidos por el estado.
+
 ## License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
