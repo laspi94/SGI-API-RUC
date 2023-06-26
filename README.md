@@ -49,12 +49,8 @@ Instalar mi proyecto con composer
 ```
     
 ## Uso/Ejemplos
-
-=======
-# SGI-API-RUC
-package para realizar llamada al api de SGI Software y Dominios para obtener los contribuyentes registrados en la Secretaría de Estado de Tributación/Paraguay
-
 # Ejemplo de uso para el método "obtenerSiExiste"
+
 ```php
 <?php
 class RucController extends Controller
