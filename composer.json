@@ -1,6 +1,6 @@
 {
     "name": "sgi-software/api-ruc",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "description": "package para realizar llamada al api de SGI Software y Dominios para obtener los contribuyentes registrados en la Secretaría de Estado de Tributación/Paraguay",
     "type": "library",
     "license": "MIT",
@@ -20,8 +20,8 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^7.1|^8",
-        "illuminate/support": "^9.0"
+        "php": "^8.1",
+        "illuminate/support": "^10.0"
     },
     "extra": {
         "laravel": {
