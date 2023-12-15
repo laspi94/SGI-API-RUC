@@ -12,7 +12,7 @@ package para realizar llamada al api de SGI Software y Dominios para obtener los
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `rucn` | `string` | **Required**. RUC |
+| `rucn` | `string` | **Required** |
 
 #### ${rucn}
 
@@ -21,17 +21,16 @@ Sin digito verificador.
 #### Obtener listado de contribuyentes con 
 
 ```http
-  GET /api/v2/buscar/tributario/${referencia}
+  GET /api/v2/buscar/tributario/${consulta}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `referencia` | `string` | **Required**. RUC |
+| `consulta` | `string` | **Required** |
 
-#### ${referencia}
+#### ${consulta}
 
-Puede usar la referencia del nombre, apellido, denominación o ruc(parcial sin digito verificador).
-
+Puede usar la consulta como el nombre, apellido, denominación o ruc(parcial sin digito verificador).
 
 ## Environment Variables
 
