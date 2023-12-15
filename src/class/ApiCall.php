@@ -97,16 +97,17 @@ class ApiCall
     {
         $callApi = (new ApiCall)->obtenerContribuyente($rucn);
 
-        /** Status 200 significa que esta en los registros de la SET
-         * por lo tanto su tipo de identificación es RUC = 11
-         */
+        /** Status 200 significa que esta en los registros de la SET */
         $cliente = new stdClass();
 
         if ($callApi->code == 200) {
 
             $reponseContent = $callApi->response->content;
 
-            switch ($reponseContent->ESTADO) {
+            /** Aunque se encuentre en los registros de la SET 
+             * debemos verificar el estado para saber si tu TIPO IDENTIFICACIÓN es 11 
+             * */
+            switch ($reponseContent->estado) {
                 case SET::ESTADO_CONTRIBUYENTE_ACTIVO:
                     $activo = true;
                     break;
@@ -121,13 +122,15 @@ class ApiCall
                     break;
             }
 
-            $nombreContribuyente = ($reponseContent->NOMBRE != '' ? ($reponseContent->APELLIDO . ',' . $reponseContent->NOMBRE) : $reponseContent->APELLIDO);
+            $nombreContribuyente = ($reponseContent->nombre != '' ? ($reponseContent->apellido . ',' . $reponseContent->nombre) : $reponseContent->apellido);
             $cliente->DESCRIPC = $nombreContribuyente;
             $cliente->FACT_NOMB = $nombreContribuyente;
-            $cliente->FACT_RUC = $activo ? ($reponseContent->RUCN . '-' . $reponseContent->DVN) : $reponseContent->RUCN;
-            $cliente->RUCN = $reponseContent->RUCN;
-            $cliente->DVN = $reponseContent->DVN;
+            $cliente->FACT_RUC = $activo ? ($reponseContent->rucn . '-' . $reponseContent->dvn) : $reponseContent->rucn;
+            $cliente->RUCN = $reponseContent->rucn;
+            $cliente->DVN = $reponseContent->dvn;
             $cliente->TIPOID = $activo ? self::TIPO_IDENTIFICACION_RUC : self::TIPO_IDENTIFICACION_CEDULA_IDENTIDAD;
+            $cliente->TIPO_CONTRIBUYENTE = $reponseContent->tipo_contribuyente;
+            $cliente->EXTRANJERO = $reponseContent->extranjero;
         }
 
         $res = new \stdClass();
