@@ -129,6 +129,7 @@ class ApiCall
             $cliente->RUCN = $reponseContent->rucn;
             $cliente->DVN = $reponseContent->dvn;
             $cliente->TIPOID = $activo ? self::TIPO_IDENTIFICACION_RUC : self::TIPO_IDENTIFICACION_CEDULA_IDENTIDAD;
+            $cliente->ESTADO = $reponseContent->estado;
             $cliente->TIPO_CONTRIBUYENTE = $reponseContent->tipo_contribuyente;
             $cliente->EXTRANJERO = $reponseContent->extranjero;
         }
